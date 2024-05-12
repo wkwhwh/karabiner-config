@@ -7,7 +7,6 @@ import {
 } from 'karabiner.ts';
 import { ifSafari, safari } from '../apps/safari';
 import { ifSlack, slack } from '../apps/slack';
-import { ifRaycast } from '../apps/raycast';
 import { arc, ifArc } from '../apps/arc';
 import { discord, ifDiscord } from '../apps/discord';
 import { ifRoon, roon } from '../apps/roon';
@@ -56,8 +55,6 @@ export const appMappings = rule('app mappings').manipulators([
   withCondition(ifDiscord)([...historyNavi, tapModifier('›⌥', discord.open)]),
 
   withCondition(ifRoon)([...historyNavi, tapModifier('›⌥', roon.open)]),
-
-  withCondition(ifRaycast)([map('[', '⌘⌃').to('⎋', '⌘')]),
 
   withCondition(ifArc)([
     ...historyNavi,

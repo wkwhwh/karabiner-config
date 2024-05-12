@@ -47,10 +47,8 @@ const rules = [
   duoLayer('f', ';').manipulators(framing).notification('Framing Layer'),
   duoLayer('d', ';').manipulators(desktop).notification('Desktop Layer'),
   duoLayer('s', ';').manipulators(system).notification('System layer'),
-
-  duoLayer('l', ';').manipulators(launch).notification('Launch Layer'),
-
   duoLayer('a', ';').manipulators(arrows).notification('Arrows Layer'),
+  duoLayer('l', ';').manipulators(launch).notification('Launch Layer'),
 
   hhkbKeyboard,
   appleKeyboard,
@@ -58,7 +56,7 @@ const rules = [
 ];
 
 writeToProfile('Default', rules, {
-  'basic.simultaneous_threshold_milliseconds': 50,
-  'duo_layer.threshold_milliseconds': 100,
+  'basic.simultaneous_threshold_milliseconds': 40,
+  'duo_layer.threshold_milliseconds': 60,
   'duo_layer.notification': true,
 });
