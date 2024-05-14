@@ -14,7 +14,6 @@ const rules = [
     duoModifier('fd', '⌘'),
     duoModifier('fs', '⌃'),
     duoModifier('fa', '⌥'),
-
     duoModifier('ds', '⇧'),
 
     duoModifier('gd', '⌘⇧'),
@@ -24,13 +23,11 @@ const rules = [
     duoModifier('vc', '⌘⌥'),
     duoModifier('vx', '⌘⌃'),
     duoModifier('cx', '⌥⌃'),
-
     duoModifier('vz', '⌘⌥⌃'),
 
     duoModifier('jk', '⌘'),
     duoModifier('jl', '⌃'),
     duoModifier('j;', '⌥'),
-
     duoModifier('kl', '⇧'),
 
     duoModifier('hk', '⌘⇧'),
@@ -40,7 +37,6 @@ const rules = [
     duoModifier('m,', '⌘⌥'),
     duoModifier('m.', '⌘⌃'),
     duoModifier(',.', '⌥⌃'),
-
     duoModifier('m/', '⌘⌥⌃'),
   ]),
 

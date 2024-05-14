@@ -35,7 +35,6 @@ export const appMappings = rule('app mappings').manipulators([
     ...historyNavi,
     ...tabNavi,
     ...switcher,
-
     tapModifier('‹⌘', safari.showHideSideBar),
     tapModifier('‹⌥', safari.reloadPage),
 
@@ -44,7 +43,6 @@ export const appMappings = rule('app mappings').manipulators([
 
   withCondition(ifSlack)([
     ...historyNavi,
-
     tapModifier('‹⌘', slack.showHideSideBar),
     tapModifier('‹⌥', slack.moveFocusToTheNextSection),
 
@@ -60,10 +58,8 @@ export const appMappings = rule('app mappings').manipulators([
     ...historyNavi,
     ...tabNavi,
     ...switcher,
-
     tapModifier('‹⌘', arc.showHideSideBar),
     tapModifier('‹⌥', arc.refreshThePage),
-
     tapModifier('›⌘', arc.developerTools),
     tapModifier('›⌥', arc.searchTabs),
   ]),
