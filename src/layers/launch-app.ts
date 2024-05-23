@@ -10,4 +10,5 @@ export const launch = {
   d: toApp('Discord'),
   s: toApp('Slack'),
   w: toApp('Wezterm'),
+  k: toApp('Kodi'),
 };

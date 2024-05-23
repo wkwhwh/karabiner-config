@@ -58,6 +58,8 @@ export const appMappings = rule('app mappings').manipulators([
     ...historyNavi,
     ...tabNavi,
     ...switcher,
+    map('h', '⌃⇧').to('[', '⌃⇧'),
+    map('l', '⌃⇧').to(']', '⌃⇧'),
     tapModifier('‹⌘', arc.showHideSideBar),
     tapModifier('‹⌥', arc.refreshThePage),
     tapModifier('›⌘', arc.developerTools),
