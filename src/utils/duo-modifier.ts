@@ -23,7 +23,9 @@ export function duoModifier(
       ? ([modifierKeyAliases[modifier as ModifierKeyAlias]] as Mod[])
       : (multiModifierAliases[modifier as MultiModifierAlias] as Mod[]);
   const to_after_key_up = [toRemoveNotificationMessage(id)];
-  return mapSimultaneous(keys.split('') as Key[], { to_after_key_up })
-    .toNotificationMessage(id, modifier) // Must go first or to() doesn't work
-    .to(`left_${firstMod}`, restMods);
+  return (
+    mapSimultaneous(keys.split('') as Key[], { to_after_key_up })
+      // .toNotificationMessage(id, modifier) // Must go first or to() doesn't work
+      .to(`left_${firstMod}`, restMods)
+  );
 }

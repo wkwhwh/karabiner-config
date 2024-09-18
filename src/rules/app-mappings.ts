@@ -10,6 +10,7 @@ import { ifSlack, slack } from '../apps/slack';
 import { arc, ifArc } from '../apps/arc';
 import { discord, ifDiscord } from '../apps/discord';
 import { ifRoon, roon } from '../apps/roon';
+import { ifKitty, kitty } from '../apps/kitty';
 
 const tapModifier = (v: SideModifierAlias, to: ToEvent) =>
   map(v).to(v).toIfAlone(to);
@@ -35,6 +36,8 @@ export const appMappings = rule('app mappings').manipulators([
     ...historyNavi,
     ...tabNavi,
     ...switcher,
+    safari.tabGroupUp,
+    safari.tabGroupDown,
     tapModifier('‹⌘', safari.showHideSideBar),
     tapModifier('‹⌥', safari.reloadPage),
 
@@ -43,6 +46,7 @@ export const appMappings = rule('app mappings').manipulators([
 
   withCondition(ifSlack)([
     ...historyNavi,
+    ...tabNavi,
     tapModifier('‹⌘', slack.showHideSideBar),
     tapModifier('‹⌥', slack.moveFocusToTheNextSection),
 
@@ -50,7 +54,17 @@ export const appMappings = rule('app mappings').manipulators([
     tapModifier('›⌥', slack.open),
   ]),
 
-  withCondition(ifDiscord)([...historyNavi, tapModifier('›⌥', discord.open)]),
+  withCondition(ifDiscord)([
+    ...historyNavi,
+    ...tabNavi,
+    tapModifier('›⌥', discord.open),
+  ]),
+
+  withCondition(ifKitty)([
+    ...tabNavi,
+    ...switcher,
+    tapModifier('›⌥', kitty.open),
+  ]),
 
   withCondition(ifRoon)([...historyNavi, tapModifier('›⌥', roon.open)]),
 

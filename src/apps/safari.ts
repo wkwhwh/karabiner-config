@@ -1,4 +1,4 @@
-import { ifApp, toKey } from 'karabiner.ts';
+import { ifApp, map, toKey } from 'karabiner.ts';
 
 export const ifSafari = ifApp('^com.apple.Safari$');
 
@@ -11,5 +11,6 @@ export const safari = {
 
   showHideSideBar: toKey('l', '⌘⇧'),
   showWebInspector: toKey('i', '⌘⌥'),
+  tabGroupUp: map('k', '⌥').to('↑', '⌘⌥'),
+  tabGroupDown: map('j', '⌥').to('↓', '⌘⌥'),
 };
-
