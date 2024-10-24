@@ -5,6 +5,7 @@ const ifAppleKeyboard = ifDevice({ vendor_id: 1452, product_id: 834 });
 export const appleKeyboard = rule('Apple', ifAppleKeyboard).manipulators([
   map('[', '⌃').to('⎋'),
   map('[', '⌘⌃').to('⎋', '⌘'),
+  map('⇪').to('<⌃'),
 
   map('›⌘', '⌥').toHyper(),
   map('›⌥', '⇧').toMeh(),

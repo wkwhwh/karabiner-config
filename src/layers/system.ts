@@ -12,7 +12,6 @@ export const system = {
   '⏎': toPointingButton('button1'),
   n: toKey('\\', '⌃'),
   '␣': toSleepSystem(),
-  a: toKey('`', '⌘'),
   c: toDeeplink(
     'raycast://extensions/raycast/clipboard-history/clipboard-history',
   ),

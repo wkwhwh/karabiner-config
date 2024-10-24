@@ -1,9 +1,11 @@
-import { toDeeplink } from '../utils/to-links';
+import { toDeeplink } from "../utils/to-links";
 
 export const framing = {
-  h: toDeeplink('raycast://extensions/raycast/window-management/left-half'),
-  j: toDeeplink('raycast://extensions/raycast/window-management/bottom-half'),
-  k: toDeeplink('raycast://extensions/raycast/window-management/top-half'),
-  l: toDeeplink('raycast://extensions/raycast/window-management/right-half'),
-  m: toDeeplink('raycast://extensions/raycast/window-management/maximize'),
+  h: toDeeplink("rectangle-pro://execute-action?name=left-half"),
+  j: toDeeplink("rectangle-pro://execute-action?name=bottom-half"),
+  k: toDeeplink("rectangle-pro://execute-action?name=top-half"),
+  l: toDeeplink("rectangle-pro://execute-action?name=right-half"),
+  m: toDeeplink("rectangle-pro://execute-action?name=maximize"),
+  n: toDeeplink("rectangle-pro://execute-action?name=next-space"),
+  p: toDeeplink("rectangle-pro://execute-action?name=prev-space"),
 };
