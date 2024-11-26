@@ -8,4 +8,7 @@ export const framing = {
   m: toDeeplink("rectangle-pro://execute-action?name=maximize"),
   n: toDeeplink("rectangle-pro://execute-action?name=next-space"),
   p: toDeeplink("rectangle-pro://execute-action?name=prev-space"),
+  "]": toDeeplink("rectangle-pro://execute-action?name=stash-right"),
+  "[": toDeeplink("rectangle-pro://execute-action?name=toggle-stashed"),
+  "\\": toDeeplink("rectangle-pro://execute-action?name=unstash-all"),
 };

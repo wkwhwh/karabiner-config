@@ -3,13 +3,15 @@ import { toDeeplink } from "../utils/to-links";
 
 export const launch = {
   c: toDeeplink("raycast://extensions/raycast/raycast-ai/ai-chat"),
-  s: toApp("Safari"),
+  b: toApp("Safari"),
   f: toApp("Finder"),
   r: toApp("Roon"),
-  b: toApp("Bear"),
   d: toApp("Discord"),
-  l: toApp("Slack"),
-  k: toApp("Kitty"),
+  s: toApp("Slack"),
+  k: toApp("Kodi"),
   i: toApp("iPhone Mirroring"),
   m: toApp("Music"),
+  n: toDeeplink("raycast://extensions/raycast/raycast-notes/raycast-notes"),
+  o: toApp("Obsidian"),
+  t: toApp("Ghostty"),
 };

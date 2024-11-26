@@ -10,6 +10,8 @@ import { ifSlack, slack } from "../apps/slack";
 import { discord, ifDiscord } from "../apps/discord";
 import { ifRoon, roon } from "../apps/roon";
 import { ifKitty, kitty } from "../apps/kitty";
+import { ifVivaldi, vivaldi } from "../apps/vivaldi";
+import { ifGhostty } from "../apps/ghostty";
 
 const tapModifier = (v: SideModifierAlias, to: ToEvent) =>
   map(v).to(v).toIfAlone(to);
@@ -43,6 +45,18 @@ export const appMappings = rule("app mappings").manipulators([
     tapModifier("›⌥", safari.searchTabs),
   ]),
 
+  withCondition(ifVivaldi)([
+    ...historyNavi,
+    ...tabNavi,
+    ...switcher,
+    vivaldi.workspaceUp,
+    vivaldi.workspaceDown,
+    tapModifier("‹⌘", vivaldi.showHideSideBar),
+    tapModifier("‹⌥", vivaldi.reloadPage),
+    tapModifier("›⌘", vivaldi.showWebInspector),
+    tapModifier("›⌥", vivaldi.searchTabs),
+  ]),
+
   withCondition(ifSlack)([
     ...historyNavi,
     ...tabNavi,
@@ -60,6 +74,12 @@ export const appMappings = rule("app mappings").manipulators([
   ]),
 
   withCondition(ifKitty)([
+    ...tabNavi,
+    ...switcher,
+    tapModifier("›⌥", kitty.open),
+  ]),
+
+  withCondition(ifGhostty)([
     ...tabNavi,
     ...switcher,
     tapModifier("›⌥", kitty.open),
